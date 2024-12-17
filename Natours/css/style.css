@@ -19,4 +19,18 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: #777;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      hsla(160, 64%, 43%, 0.8)
+    ),
+    url("./../img/hero.jpg");
+  background-size: cover; /* adapt to viewport size */
+  background-position: top; /* top always stays fixed */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%);
 }
