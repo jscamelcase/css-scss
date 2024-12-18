@@ -32,5 +32,50 @@ body {
     url("./../img/hero.jpg");
   background-size: cover; /* adapt to viewport size */
   background-position: top; /* top always stays fixed */
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%);
+  position: relative;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    0% 100%
+  ); /*defines the visable part of the element*/
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%; /* not 50% because it looks better with design */
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* we are now shifting relative to the element's size, no the parent, 50% to the left of its width, and 50% of its height to the top, to put it dead center with the position absolute */
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+  display: block;
+  letter-spacing: 17.4px;
+  font-size: 20px;
+  font-weight: 700px;
 }
