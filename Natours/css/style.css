@@ -59,6 +59,7 @@ body {
     -50%,
     -50%
   ); /* we are now shifting relative to the element's size, no the parent, 50% to the left of its width, and 50% of its height to the top, to put it dead center with the position absolute */
+  text-align: center; /* centers the child inline-block anchor/button */
 }
 
 .heading-primary {
@@ -66,6 +67,7 @@ body {
   text-transform: uppercase;
 
   backface-visibility: hidden; /* usually used for 3d rotation to hide the backface of the element rather than mirror, but it is also used to smooth the animation of an element */
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -122,4 +124,35 @@ only two properties the opacity and transform */
     opacity: 1;
     transform: translate(0);
   }
+}
+/* The link is pseudo class, is for an anchor element that 
+sets a rule for when a link is in an unclicked state. 
+:visited */
+
+/* the intial state gets the transiton property */
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 200px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* all translated with psedo class relate to the resting state , so raising the translateY valuu relative to .btn hover makes it appear like it moves up on the screen */
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
