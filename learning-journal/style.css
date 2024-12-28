@@ -1,0 +1,165 @@
+/* General Styling */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 63%;
+}
+
+body {
+  font-family: "Source Sans 3", serif;
+}
+
+h1 {
+  font-family: "Roboto", serif;
+  font-size: 1.4rem;
+  line-height: 1.08;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/* Utility Classes */
+
+.center-container {
+  margin: 0 auto;
+}
+
+.mt-1 {
+  margin-top: 4rem;
+}
+.mb-08 {
+  margin-bottom: 0.8rem;
+}
+
+.plr-2 {
+  padding: 0 2rem;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header";
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-sm {
+  font-size: 1.2rem;
+}
+
+.text-m {
+  font-size: 1.6rem;
+}
+
+.text-lg {
+  font-size: 3.2rem;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.mb-1 {
+  margin-bottom: 0.3rem;
+}
+
+.align__items-center {
+  align-items: center;
+}
+
+.justify__space-between {
+  justify-content: space-between;
+}
+
+/* Component BEM classes */
+
+.header {
+  height: 42vh;
+  grid-area: "header";
+}
+
+.header__banner {
+  padding-top: 0.88rem;
+  padding-bottom: 0.88rem;
+}
+
+.header__logo-container {
+  margin-right: 2rem;
+}
+
+.header__list-item {
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.header__hero {
+  background-image: url("./images/article-image-hero.png");
+  height: 100%;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  color: white;
+}
+
+.header__title-container {
+  position: absolute;
+  bottom: 2rem;
+}
+
+.header__date {
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.header__title {
+  line-height: 1.08;
+}
+
+.blog {
+  padding-top: 5rem;
+  grid-area: "blog";
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 4rem 0;
+}
+
+.blog__article-container {
+}
+
+.blog__image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.blog__date {
+  font-size: 1.4rem;
+  display: block;
+}
+
+.blog__title {
+  font-size: 2.4rem;
+}
+
+.blog__para {
+  line-height: 1.25;
+}
