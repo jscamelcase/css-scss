@@ -17,7 +17,6 @@ body {
 }
 
 h1 {
-  font-family: "Roboto", serif;
   font-size: 1.4rem;
   line-height: 1.08;
 }
@@ -28,6 +27,10 @@ p {
 
 /* Utility Classes */
 
+.font-roboto {
+  font-family: "Roboto", serif;
+}
+
 .center-container {
   margin: 0 auto;
 }
@@ -37,6 +40,10 @@ p {
 }
 .mb-08 {
   margin-bottom: 0.8rem;
+}
+
+.mb-15 {
+  margin-bottom: 1.5rem;
 }
 
 .plr-2 {
@@ -144,6 +151,7 @@ p {
 .header__date {
   margin-bottom: 0.8rem;
   display: block;
+  text-transform: uppercase;
 }
 
 .header__title {
@@ -185,6 +193,7 @@ p {
 .blog__date {
   font-size: 1.4rem;
   display: block;
+  text-transform: uppercase;
 }
 
 .blog__title {
@@ -215,4 +224,29 @@ p {
 
 .footer__para {
   font-weight: bold;
+}
+
+/* Single Post Page */
+.single-post__para {
+  margin-bottom: 2rem;
+}
+
+.single-post__image {
+  width: 100%;
+}
+
+.single-post__h2 {
+  margin-bottom: 2rem;
+}
+
+.recents {
+}
+
+.recents__h2 {
+  text-align: center;
+}
+
+.recents__articles {
+  display: grid;
+  grid-template-columns: 1fr;
 }
