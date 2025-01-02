@@ -274,3 +274,13 @@ p {
     gap: 1rem;
   }
 }
+
+.about__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about__heading-image {
+  width: 182px;
+}

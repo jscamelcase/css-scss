@@ -22,9 +22,8 @@ function handleWidthChange() {
     });
   } else {
     singlePostElementsArray.forEach((element) => {
-      console.log("hello");
-      element.style.paddingLeft = "2rem";
-      element.style.paddingRight = "2rem";
+      element.style.paddingLeft = "0rem";
+      element.style.paddingRight = "0rem";
     });
   }
 }
