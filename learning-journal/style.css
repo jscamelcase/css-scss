@@ -231,22 +231,46 @@ p {
   margin-bottom: 2rem;
 }
 
+@media (min-width: 768px) {
+  .single-post__para {
+    font-size: 1.6rem;
+  }
+}
+
 .single-post__image {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .single-post__image {
+    padding: 0;
+  }
 }
 
 .single-post__h2 {
   margin-bottom: 2rem;
 }
 
-.recents {
+@media (min-width: 768px) {
+  .single-post__h2 {
+    font-size: 2.4rem;
+  }
 }
 
 .recents__h2 {
   text-align: center;
+  font-size: 1.6rem;
 }
 
 .recents__articles {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .recents__articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
 }
