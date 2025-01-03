@@ -6,6 +6,13 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-grey-dark: #777;
+$color-white: #fff;
+
 *,
 ::before,
 ::after {
@@ -23,18 +30,27 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 3rem;
   box-sizing: border-box;
 }
-
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("./../img/hero.jpg");
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("./../img/hero.jpg");
   background-size: cover; /* adapt to viewport size */
   background-position: top; /* top always stays fixed */
   position: relative;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%); /*defines the visable part of the element*/
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    0% 100%
+  ); /*defines the visable part of the element*/
 }
 
 .header__logo-box {
@@ -51,13 +67,17 @@ body {
   position: absolute;
   top: 40%; /* not 50% because it looks better with design */
   left: 50%;
-  transform: translate(-50%, -50%); /* we are now shifting relative to the element's size, no the parent, 50% to the left of its width, and 50% of its height to the top, to put it dead center with the position absolute */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* we are now shifting relative to the element's size, no the parent, 50% to the left of its width, and 50% of its height to the top, to put it dead center with the position absolute */
   text-align: center; /* centers the child inline-block anchor/button */
 }
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
+
   backface-visibility: hidden; /* usually used for 3d rotation to hide the backface of the element rather than mirror, but it is also used to smooth the animation of an element */
   margin-bottom: 6rem;
 }
@@ -70,6 +90,7 @@ body {
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+
   /* animation-delay: 3s; 
   animation-iteration-count: 3;
   */
@@ -82,7 +103,6 @@ body {
   font-weight: 700;
   animation: moveInRight 1s ease-out;
 }
-
 /* For browser performance, always best to animate 
 only two properties the opacity and transform */
 @keyframes moveInLeft {
@@ -91,32 +111,39 @@ only two properties the opacity and transform */
     /* you can put more than one value on the transform line */
     transform: translateX(-10rem);
   }
+
   80% {
     transform: translateX(1rem);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
     transform: translateX(10rem);
   }
+
   80% {
     transform: translateX(-1rem);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
+
 @keyframes moveInBottom {
   0% {
     opacity: 0;
     transform: translateY(3rem);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
@@ -125,7 +152,9 @@ only two properties the opacity and transform */
 /* The link is pseudo class, is for an anchor element that 
 sets a rule for when a link is in an unclicked state. 
 :visited */
+
 /* the intial state gets the transiton property */
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -150,8 +179,8 @@ sets a rule for when a link is in an unclicked state.
 }
 
 .btn--white {
-  background-color: #fff;
-  color: #777;
+  background-color: $color-white;
+  color: $color-grey-dark;
 }
 
 .btn::after {
@@ -166,7 +195,6 @@ sets a rule for when a link is in an unclicked state.
   z-index: -1; /*put the after behind the button */
   transition: all 0.4s;
 }
-
 .btn--white::after {
   background-color: #fff;
 }
@@ -180,5 +208,3 @@ sets a rule for when a link is in an unclicked state.
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
-
-/*# sourceMappingURL=style.css.map */
