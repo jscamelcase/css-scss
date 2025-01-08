@@ -6,80 +6,6 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  box-sizing: border-box;
-}
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("./../img/hero.jpg");
-  background-size: cover; /* adapt to viewport size */
-  background-position: top; /* top always stays fixed */
-  position: relative;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%); /*defines the visable part of the element*/
-  /* following BEM, and using "nesting" with the combined & sign to create the new sub selector helps to avoid clashes with logo-box in another module */
-}
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-.header__logo {
-  height: 3.5rem;
-}
-.header__text-box {
-  position: absolute;
-  top: 40%; /* not 50% because it looks better with design */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* we are now shifting relative to the element's size, no the parent, 50% to the left of its width, and 50% of its height to the top, to put it dead center with the position absolute */
-  text-align: center; /* centers the child inline-block anchor/button */
-}
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden; /* usually used for 3d rotation to hide the backface of the element rather than mirror, but it is also used to smooth the animation of an element */
-  margin-bottom: 6rem;
-}
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* animation-delay: 3s; 
-  animation-iteration-count: 3;
-  */
-}
-.heading-primary--sub {
-  display: block;
-  letter-spacing: 1.75px;
-  font-size: 2rem;
-  font-weight: 700;
-  animation: moveInRight 1s ease-out;
-}
-
 /* For browser performance, always best to animate 
 only two properties the opacity and transform */
 @keyframes moveInLeft {
@@ -119,6 +45,57 @@ only two properties the opacity and transform */
     transform: translate(0);
   }
 }
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden; /* usually used for 3d rotation to hide the backface of the element rather than mirror, but it is also used to smooth the animation of an element */
+  margin-bottom: 6rem;
+}
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /* animation-delay: 3s; 
+  animation-iteration-count: 3;
+  */
+}
+.heading-primary--sub {
+  display: block;
+  letter-spacing: 1.75px;
+  font-size: 2rem;
+  font-weight: 700;
+  animation: moveInRight 1s ease-out;
+}
+
 /* The link is pseudo class, is for an anchor element that 
 sets a rule for when a link is in an unclicked state. 
 :visited */
@@ -170,6 +147,32 @@ sets a rule for when a link is in an unclicked state.
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("./../img/hero.jpg");
+  background-size: cover; /* adapt to viewport size */
+  background-position: top; /* top always stays fixed */
+  position: relative;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%); /*defines the visable part of the element*/
+  /* following BEM, and using "nesting" with the combined & sign to create the new sub selector helps to avoid clashes with logo-box in another module */
+}
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+.header__logo {
+  height: 3.5rem;
+}
+.header__text-box {
+  position: absolute;
+  top: 40%; /* not 50% because it looks better with design */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* we are now shifting relative to the element's size, no the parent, 50% to the left of its width, and 50% of its height to the top, to put it dead center with the position absolute */
+  text-align: center; /* centers the child inline-block anchor/button */
 }
 
 /*# sourceMappingURL=style.css.map */
